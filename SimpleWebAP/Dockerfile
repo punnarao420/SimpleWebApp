@@ -6,7 +6,7 @@ COPY . .
  
 RUN dotnet restore
  
-RUN dotnet publish ./SimpleWebAP/SimpleWebAP.sln -o /publish/
+RUN dotnet publish ./SimpleWebAP/SimpleWebAP.csproj -o /publish/
  
 WORKDIR /publish
  
