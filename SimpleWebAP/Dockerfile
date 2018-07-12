@@ -1,7 +1,11 @@
-FROM microsoft/dotnet:2.1-sdk AS build
+#FROM microsoft/dotnet:2.1-sdk AS build
+FROM microsoft/aspnet
 
-COPY ./SimpleWebAP .
-WORKDIR ./SimpleWebAP
+# The final instruction copies the site you published earlier into the container.
+COPY ./SimpleWebAP/bin/Release/PublishOutput/ /inetpub/wwwroot
+
+#COPY ./SimpleWebAP .
+#WORKDIR ./SimpleWebAP
 
 #RUN dotnet publish -c Release -o out
 
