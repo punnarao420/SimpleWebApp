@@ -3,9 +3,9 @@ FROM microsoft/aspnetcore-build:2.0 AS build-env
 CMD echo $pwd
 CMD ls -l $pwd
 CMD echo "copying from shared path "
-COPY \\my\share\PushToDocker .
+COPY ./SimpleWebAP .
+WORKDIR ./SimpleWebAP
 CMD ls -l .
-CMD echo $(build.artifactstagingdirectory)
 #WORKDIR /app
 
 # Copy csproj and restore as distinct layers
