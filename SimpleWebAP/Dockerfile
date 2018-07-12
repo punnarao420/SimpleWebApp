@@ -2,7 +2,7 @@
 FROM microsoft/aspnet
 
 # The final instruction copies the site you published earlier into the container.
-COPY ./SimpleWebAP/SimpleWebAP/bin/Release/PublishOutput/ /inetpub/wwwroot
+COPY ./SimpleWebAP/obj/Release/ /inetpub/wwwroot
 
 #COPY ./SimpleWebAP .
 #WORKDIR ./SimpleWebAP
